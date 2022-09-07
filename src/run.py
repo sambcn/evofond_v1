@@ -222,17 +222,17 @@ def run_back(args, hydrau=None):
         y_matrix_bis = [[y_matrix[i][xi] for i in range(len(t_list))] for xi in range(len(x))]
         data = [x, [max(y_matrix_bis[i]) for i in range(len(x))], [t_list[y_matrix_bis[i].index(max(y_matrix_bis[i]))] for i in range(len(x))]]
         column_name_list = ["x", "hmax", "tmax"]
-        write_datafile("hmax.txt", column_name_list, data)
+        write_datafile("hauteur_max.txt", column_name_list, data)
 
         z_matrix_bis = [[z_matrix[i][xi] for i in range(len(t_list))] for xi in range(len(x))]
         data = [x, [max(z_matrix_bis[i]) for i in range(len(x))], [t_list[z_matrix_bis[i].index(max(z_matrix_bis[i]))] for i in range(len(x))]]
         column_name_list = ["x", "zmax", "tmax"]
-        write_datafile("zmax.txt", column_name_list, data)
+        write_datafile("altitude_max.txt", column_name_list, data)
 
         h_matrix_bis = [[h_matrix[i][xi] for i in range(len(t_list))] for xi in range(len(x))]
         data = [x, [max(h_matrix_bis[i]) for i in range(len(x))], [t_list[h_matrix_bis[i].index(max(h_matrix_bis[i]))] for i in range(len(x))]]
         column_name_list = ["x", "Hmax", "tmax"]
-        write_datafile("Hmax.txt", column_name_list, data)        
+        write_datafile("charge_max.txt", column_name_list, data)        
         
     else:
         # profile.plot(Q=hydrau)
