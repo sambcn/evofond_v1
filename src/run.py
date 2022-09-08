@@ -166,7 +166,7 @@ def run_back(args, hydrau=None):
         
         if args["PERF"]:
             Performance.start() 
-        result = profile.compute_event(Q, t, transport_law, sedimentogram=QsIn, backup=False, debug=False, method="ImprovedEuler", friction_law=args["FRICTION_LAW"], cfl=args["SPEED_COEF"], critical=args["CRITICAL"], upstream_condition=args["UPSTREAM_CONDITION"], downstream_condition=args["DOWNSTREAM_CONDITION"], plot=True)
+        result = profile.compute_event(Q, t, transport_law, sedimentogram=QsIn, backup=False, debug=False, method="ImprovedEuler", friction_law=args["FRICTION_LAW"], cfl=args["SPEED_COEF"], critical=args["CRITICAL"], upstream_condition=args["UPSTREAM_CONDITION"], downstream_condition=args["DOWNSTREAM_CONDITION"], plot=False)
         if args["PERF"]:
             Performance.stop()
         try:
