@@ -743,8 +743,8 @@ class Profile():
                     else:
                         ax.fill_betweenx([ymin, ymax], x_current, new_x, color='grey', alpha=alpha_min+(alpha_max-alpha_min)*((b_max-b_current)/(b_diff)), label=f"width = {b_current}m")
                     x_current = new_x
-                    b_seen.append(b_current)
                     b_current = b_list[i]
+                    b_seen.append(b_current)
             if not(label) or (b_current in b_seen):
                 draw_list.append(ax.fill_betweenx([ymin, ymax], x_current, x_final, color='grey', alpha=alpha_min+(alpha_max-alpha_min)*((b_max-b_current)/(b_diff))))
             else:    
